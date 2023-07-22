@@ -1,0 +1,61 @@
+h1{
+  color: #ec1809;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 25px;
+}
+
+
+a{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+button{
+  background-color: #d86b12;
+}
+
+.conectado{
+  color: #447a2b;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-width: 4px ; 
+  padding: 3px;
+  /*border-style: solid;
+  border-color: black ;
+  width: 300px; /* pixeles es un unidad de medida absoluta siempre vale lo mismo*/
+  height: 50px ;
+}
+.cerrar{
+  color: #39393db6;
+}
+
+.desconectado{
+  color: #447a2b;
+  text-align: left;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-width: 4px ; 
+  padding-top: 3px;
+  /*border-style: solid;
+  border-color: black ;
+  width: 300px; /* pixeles es un unidad de medida absoluta siempre vale lo mismo*/
+  height: 30px ;
+}
+
+
+body{
+  background-color: silver;
+}
+
+
+.contenedor {
+  background-color: rgb(231, 212, 129);
+}
+
+* {
+    text-align: center;
+}
+
+card {
+    text-align: center;
+}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo%} nosotros {%endblock titulo%}
+
+{% block contenido%}
+<h1>COMISION 5 - GRUPO 4</h1>
+<img src="{% static 'img/logito.png' %}" alt="error" height="200">
+
+<hr> <!-- hr = Horizontal rule (linea horizontal) -->
+<p><strong> INTEGRANTES : </strong> </p> <!-- strong = NEGRITAS -->
+<ul> 
+    <li>Gonzalo Alarcón</li>
+    <li>Elias Barboza</li>
+    <li>Hugo Ramirez</li>
+    <li>Bruno Agustín Ruidiaz</li>
+</ul>
+<hr> <!-- hr = Horizontal rule (linea horizontal) -->
+
+
+
+
+<!--- <h2>{{ saludo }}</h2>
+<h2>{{ nombre }}</h2>
+<h2>{{ autor }}</h2> -->
+{% endblock contenido%}

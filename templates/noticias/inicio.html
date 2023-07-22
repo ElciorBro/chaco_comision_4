@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo%} noticias {% endblock titulo %}
+
+{% block contenido%}
+<h2>Soy las noticias</h2>
+
+<a href="{% url 'noticias:inicio' %}"> Todas</a>
+{% for c in categorias %}
+<a href="?id={{c.pk}}">{{c.nombre}}</a>
+{% endfor %}
+
+{% for noticia in noticias %}
+
+<h2>titulo:<a href="{% url 'noticias:detalle' noticia.pk %}"> <strong>{{ noticia.titulo }}</strong></a></h2>
+<p>cuerpo: {{ noticia.cuerpo }}</p>
+<p>{{noticia.fecha}}</p>
+<p>categoria: {{noticia.categoria_noticia}}</p>
+<img src="{{ noticia.imagen.url }}" alt="" width="200">
+
+{% endfor %}
+
+{% endblock contenido%}
