@@ -8,8 +8,8 @@ class ContactoForm(forms.ModelForm):
         model = Contacto
         fields = "__all__"
 
-class NoticiasForm(forms.ModelForm):
+class NoticiaForm(forms.ModelForm):
     class Meta:
         model = Noticia
-        fields = ['titulo', 'cuerpo', 'fecha', 'imagen', 'categoria_noticia']
+        fields = ['titulo', 'cuerpo', 'imagen', 'categoria_noticia']
         

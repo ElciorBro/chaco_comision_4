@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from .models import Noticia, Categoria, Contacto, Comentario
+from .forms import NoticiaForm
 # Create your views here.
 
 from .forms import ContactoForm
@@ -53,9 +54,30 @@ def Detalle_Noticias(request, pk):
     return render(request, 'noticias/detalle.html', contexto)
 
 
+
+
+#Formulario de Registro de noticas
+@login_required
+def registrar_noticia(request):
+    if request.method == 'POST':
+        form = NoticiaForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = NoticiaForm()
+        
+    return render(request, 'noticias/registrar_noticia.html', {'form': form})
+
+
+
+            
+
+
 # ClaseName.objects.all()[0:2]              select * from noticias
 # ClaseName.objects.get(pk = 1)        select * from noticias where id = 1
 # ClaseName.objects.filter(categoria)  select * from noticias where categoria = deportes
+
 
 
 def contacto(request):

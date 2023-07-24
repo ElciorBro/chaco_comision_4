@@ -48,6 +48,6 @@ urlpatterns = [
     path('logout/', auth.LogoutView.as_view(), name='logout'),
 
     # Registro
-    path('usuarios/', include('apps.usuarios.urls'))
+    path('usuarios/', include('apps.usuarios.urls')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
