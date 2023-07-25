@@ -33,6 +33,11 @@ def inicio(request):
     else:
         n = Noticia.objects.all()  # una lista
 
+    # CODIGO DEL BUSCADOR
+    busqueda = request.GET.get('termino_busqueda', None)
+    if busqueda:
+        n = n.filter(titulo__icontains=busqueda)
+
     contexto['noticias'] = n
 
     cat = Categoria.objects.all().order_by('nombre')
@@ -57,20 +62,34 @@ def Detalle_Noticias(request, pk):
 
 
 #Formulario de Registro de noticas
-@login_required
-def registrar_noticia(request):
-    if request.method == 'POST':
-        form = NoticiaForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('home')
-    else:
-        form = NoticiaForm()
+# @login_required
+# def registrar_noticia(request):
+#     if request.method == 'POST':
+#         form = NoticiaForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('home')
+#     else:
+#         form = NoticiaForm()
         
-    return render(request, 'noticias/registrar_noticia.html', {'form': form})
+#     return render(request, 'noticias/registrar_noticia.html', {'form': form})
 
 
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import CreateView
 
+class CrearNoticia(LoginRequiredMixin, CreateView):
+	model = Noticia
+	form_class = NoticiaForm
+	template_name = 'noticias/registrar_noticia.html'
+	success_url = reverse_lazy('noticias:inicio')
+	
+	def form_valid(self, form):
+		noticia = form.save(commit=False)
+		noticia.autor = self.request.user
+		return super(CrearNoticia, self).form_valid(form)
+
+            
             
 
 
@@ -99,3 +118,4 @@ def Comentar_Noticia(request):
     coment = Comentario.objects.create(
         usuario=user, noticia=noticia, texto=comentario)
     return redirect(reverse_lazy('noticias:detalle', kwargs={"pk": noti}))
+

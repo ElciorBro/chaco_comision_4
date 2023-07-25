@@ -18,6 +18,9 @@ urlpatterns = [
     path('comentario', views.Comentar_Noticia, name='comentar'),
     
     # URL de registracion de noticias
-    path('registrar_noticia/', views.registrar_noticia, name='registrar_noticia'),
+    # path('registrar_noticia/', views.registrar_noticia, name='registrar_noticia'),
+
+     # crear noti
+    path('registrar_noticia/', views.CrearNoticia.as_view(), name='registrar_noticia')
 
 ]
