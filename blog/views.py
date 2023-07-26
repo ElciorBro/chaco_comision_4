@@ -10,6 +10,8 @@ def nosotros(request):
         "nombre": "Soy el contexto",
         "autor": "Dani"
     })
+    
+
 
 
 # def login(request):

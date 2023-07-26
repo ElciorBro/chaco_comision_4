@@ -28,7 +28,7 @@ LOGIN_REDIRECT_URL = reverse_lazy('home')
 LOGOUT_REDIRECT_URL = reverse_lazy('home')
 LOGIN_URL = reverse_lazy('login')
 
-AUTH_USER_MODEL = 'usuarios.Usuario'
+AUTH_USER_MODEL = 'noticias.Usuario'
 
 # Application definition
 
@@ -39,9 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.usuarios',
     'apps.noticias',
-
 ]
 
 MIDDLEWARE = [

@@ -1,7 +1,9 @@
 from django.db import models
-from apps.usuarios.models import Usuario
+from django.contrib.auth.models import AbstractUser
 # Create your models here.
 
+class Usuario(AbstractUser):
+    pass 
 
 class Categoria(models.Model):
     nombre = models.CharField(max_length=50)
@@ -37,6 +39,7 @@ class Comentario(models.Model):
     fecha = models.DateTimeField(auto_now_add=True)
     noticia = models.ForeignKey(Noticia, on_delete=models.CASCADE)
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    
 
     def __str__(self) -> str:
         return f"{self.noticia} {self.texto}"

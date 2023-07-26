@@ -1,5 +1,28 @@
 from django import forms
-from .models import Contacto, Noticia
+from django.contrib.auth.forms import UserCreationForm
+from .models import Contacto, Noticia, Usuario
+
+class RegistroForm(UserCreationForm):
+    email = forms.EmailField(label='Correo', required=True)
+    first_name = forms.CharField(label='Nombre', required=True)
+    last_name = forms.CharField(label='apellido', required=True)
+    password1 = forms.CharField(
+        label='contraseña', widget=forms.PasswordInput, required=True)
+    password2 = forms.CharField(
+        label='contraseña2', widget=forms.PasswordInput, required=True)
+
+    class Meta:
+        model = Usuario
+        fields = [
+            'first_name',
+            'last_name',
+            'username',
+            'email',
+            'password1',
+            'password2'
+        ]
+
+
 
 
 class ContactoForm(forms.ModelForm):
@@ -11,7 +34,7 @@ class ContactoForm(forms.ModelForm):
 class NoticiaForm(forms.ModelForm):
     class Meta:
         model = Noticia
-        fields = ['titulo', 'cuerpo', 'imagen', 'categoria_noticia']
-
-class BuscadorForm(forms.Form):
-    busqueda = forms.CharField(label='Buscar', max_length=100)
+        fields = ('titulo', 'cuerpo', 'imagen', 'categoria_noticia')
+        
+# class BuscadorForm(forms.Form):
+#     busqueda = forms.CharField(label='Buscar', max_length=100)
