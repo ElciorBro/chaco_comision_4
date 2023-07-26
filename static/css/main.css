@@ -72,3 +72,10 @@ body{
   height: 0;
   z-index: -1; 
 }
+
+.logout_container {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

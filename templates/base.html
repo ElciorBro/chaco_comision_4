@@ -28,17 +28,20 @@
         <button type = "submit"> <a href="{% url 'nosotros' %}">Nosotros</a> </button> <!-- muestra un boton -->
         <button type = "submit"><a href="{% url 'noticias:inicio' %}"> Noticia </a></button> <!-- muestra un boton -->
         <button type = "submit"><a href="{% url 'noticias:contacto' %}"> Contacto </a></button> <!-- muestra un boton -->
-
+        
         
         {% if user.is_authenticated %}
-            <div class="conectado">
-                <h4> USUARIO: {{ user.username }} en linea </h4>
-                <a href="{% url 'logout' %}" class="cerrar">((Cerrar sesion))</a>
-            </div>
+        <div class="conectado">
+            <h2>Bienvenido otra vez</h2>
+            <h2> USUARIO: {{ user.username }} en linea </h4>
+        </div>
+        <div class="logout_container">
+            <a href="{% url 'logout' %}" class="cerrar">((Cerrar sesion))</a>
+        </div>
         {% else %}
             <div class="desconectado">
                 <button type = "submit"><a href="{% url 'login' %}"> Login </a></button> <!-- muestra un boton -->
-                <button type = "submit"><a href="{% url 'noticias:registrar_noticia' %}">Registrate</a></button> <!-- muestra un boton -->
+                <button type = "submit"><a href="{% url 'noticias:registro' %}">Registrate</a></button> <!-- muestra un boton -->
             </div>
         {% endif %}
         
