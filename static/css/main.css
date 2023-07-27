@@ -15,10 +15,6 @@ a{
   font-weight: bold;
 }
 
-button{
-  background-color: #d86b12;
-}
-
 .conectado{
   color: #447a2b;
   text-align: center;
@@ -48,12 +44,10 @@ button{
 
 
 body{
-  background-color: silver;
 }
 
 
 .contenedor {
-  background-color: rgb(231, 212, 129);
 }
 
 * {
@@ -64,18 +58,45 @@ body{
     text-align: center;
 }
 
-.nissan {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  z-index: -1; 
-}
+
 
 .logout_container {
   margin-top: 15px;
   margin-bottom: 15px;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+/* nav container */
+.navbar {
+  padding: 0;
+}
+
+/* Logo */
+.navbar-brand {
+  padding: 0; 
+}
+
+.nav-item {
+  width: 30%;
+}
+
+.navbar-nav {
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+/* Estilo adicional para los botones del menú */
+.navbar-nav .nav-item {
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* Opcional: Ajusta el espacio entre los botones */
+.navbar-nav .nav-item:not(:last-child) {
+  margin-right: 5vh; /* Puedes ajustar el valor según tu preferencia */
+}
+
+.navbar-nav .nav-item .nav-link {
+  font-size: 20px;
 }
