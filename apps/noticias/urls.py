@@ -26,4 +26,6 @@ urlpatterns = [
     # Registro de Usuarios
     path('registro/', views.Registro.as_view(), name="registro"),
     
+   
+    
 ]

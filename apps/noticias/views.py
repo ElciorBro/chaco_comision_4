@@ -116,3 +116,5 @@ def Comentar_Noticia(request):
     coment = Comentario.objects.create(
         usuario=user, noticia=noticia, texto=comentario)
     return redirect(reverse_lazy('noticias:detalle', kwargs={"pk": noti}))
+
+

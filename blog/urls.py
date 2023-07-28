@@ -49,5 +49,8 @@ urlpatterns = [
 
     # Registro
     # path('usuarios/', include('apps.usuarios.urls')),
+    
+     #Mejores Juegos
+    path("recomendaciones/", views.recomendaciones, name="recomendaciones")
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

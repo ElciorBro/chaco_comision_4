@@ -11,7 +11,8 @@ def nosotros(request):
         "autor": "Dani"
     })
     
-
+def recomendaciones(request):
+    return render(request, "juegos.html")
 
 
 # def login(request):

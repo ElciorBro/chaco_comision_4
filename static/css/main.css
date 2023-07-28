@@ -74,7 +74,7 @@ body{
 
 /* Logo */
 .navbar-brand {
-  padding: 0; 
+  padding: 5´x; 
 }
 
 .nav-item {
@@ -94,7 +94,7 @@ body{
 
 /* Opcional: Ajusta el espacio entre los botones */
 .navbar-nav .nav-item:not(:last-child) {
-  margin-right: 5vh; /* Puedes ajustar el valor según tu preferencia */
+  margin-right: 10px; /* Puedes ajustar el valor según tu preferencia */
 }
 
 .navbar-nav .nav-item .nav-link {
