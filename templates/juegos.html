@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="es ar" >
-<head>
-  <meta charset="UTF-8">
-  <title>8 JUEGOS INDIE</title>
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+{% extends 'base.html' %}
+{% load static %}
+{% block stylesheet %} 
 <link rel="stylesheet" href="../static/css/juegos.css">
+{% endblock stylesheet %}
+{% block titulo%} 8 Juegos Indie {%endblock titulo%}
 
-</head>
-<body>
-
-
-
+{% block contenido%}
   <!-- partial:index.partial.html -->
 <!-- TARJETA 1 -->
 <main class="page-content">
@@ -80,8 +75,4 @@
   
 </main>
 <!-- partial -->
-
-
-
-</body>
-</html>
+{% endblock contenido%}

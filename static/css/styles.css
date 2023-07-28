@@ -1,0 +1,35 @@
+/* styles.css */
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #bb0e0e;
+    padding: 10px;
+  }
+  
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul#categories {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #7e3acc;
+    margin-top: 10px;
+  }
+  
+  .category {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .category:hover {
+    background-color: #ccc;
+  }
+  

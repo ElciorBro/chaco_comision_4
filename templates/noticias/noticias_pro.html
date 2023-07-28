@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>proyecto2023</title>
+  <link rel="repositorio\blog\static\css\styles.css" href="styles.css">
+</head>
+<body>
+    <div>
+        <button type = "submit"><a href="{% url 'home' %}" style="color: rgb(90, 44, 196); text-decoration: none ; font-weight: bold;" >   Categorias  </a></button> <!-- muestra un boton -->
+        <button type = "submit"> <a href="{% url 'nosotros' %}" style="color: white; text-decoration: none ; font-weight: bold;" > RPG</a> </button> <!-- muestra un boton -->
+        <button type = "submit"><a href="{% url 'noticias:inicio' %}" style="color: white; text-decoration: none ; font-weight: bold;" >  AVENTURAS </a></button> <!-- muestra un boton -->
+        <button type = "submit"><a href="{% url 'noticias:contacto' %}" style="color: white; text-decoration: none ; font-weight: bold;" > TERROR </a></button> <!-- muestra un boton -->
+        <button type = "submit"> <a href="{% url 'juegos' %}" style="color: white; text-decoration: none ; font-weight: bold;" > Juegos </a> </button> <!-- muestra un boton -->
+      </div>
+  <header>
+
+    <ul id="categories">
+      <li class="category"></li>
+      <li class="category">RPG</li>
+      <li class="category">AVENTURAS</li>
+      <li class="category">CARRERAS</li>
+      <!-- Puedes agregar más categorías aquí -->
+    </ul>
+  </header>
+  <main>
+    <!-- Contenido del blog -->
+  </main>
+  <script src="repositorio\blog\static\js\script.js"></script>
+</body>
+</html>
