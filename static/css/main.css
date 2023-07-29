@@ -1,5 +1,6 @@
 body {
   position: relative;
+  
 }
 
 h1{
@@ -52,7 +53,7 @@ body{
 }
 
 * {
-    text-align: center;
+    /* text-align: center; */
 }
 
 .card {
@@ -101,3 +102,98 @@ body{
 .navbar-nav .nav-item .nav-link {
   font-size: 20px;
 }
+
+
+/* ESTILO DEL DIV PRINCIPAL */
+
+.main-container{
+  margin: 15px;
+  padding: 15px;
+}
+
+.aside-contaienr{
+  margin: 20px;
+  padding: 20px;
+}
+
+
+
+
+/* Estilos del Footer RESPONSIVE */
+
+
+.grupo1 {
+  background-color: rgb(7, 49, 87);
+}
+
+.grupo2 {
+  background-color: rgb(1, 37, 68);
+  padding: 15px 15px;
+
+}
+
+footer figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.grupo1 figure{
+  margin: 5px 10px;
+}
+
+.logo-footer-img {
+  margin-top: 5px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.box {
+  margin: 0px 20px;
+  flex: 1;
+}
+
+.red-social {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+
+.red-social a {
+  /* border: 2px solid brown; */
+  background-color: rgb(15, 69, 116);
+  margin-bottom: 20px;
+  margin-right: 2vh;
+  padding: 12px 12px;
+  color: #FFF;
+  box-sizing: border-box;
+}
+
+.box h2{
+  color: #fff;
+}
+
+.box p{
+  color: #fff;
+}
+
+small {
+  color: #fff;
+}
+
+
+
+@media screen and (min-width:730px) {
+  .grupo1 {
+      display: flex;
+      flex-direction: row;
+  }
+  
+  .logo-footer-img {
+      height: 30vh;
+      margin: 0px 5px;
+      
+  }
+}
+

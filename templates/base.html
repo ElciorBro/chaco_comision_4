@@ -7,6 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <script src="https://kit.fontawesome.com/883aaa2c72.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Ubuntu&display=swap" rel="stylesheet">
+        
         {% block stylesheet %}
 
         {% endblock stylesheet %}
@@ -89,28 +92,39 @@
           </div>
         </div>
       </nav>
-    <!-- <div>         -->
-        <!-- {% if user.is_authenticated %}
-        <div class="conectado">
-            <h2> {{ user.username }} </h4>
-        </div>
-        <div class="logout_container">
-            <a href="{% url 'logout' %}" class="cerrar">Cerrar sesion</a>
-        </div> -->
-        <!-- {% else %} -->
-            <!-- <div class="desconectado"> -->
-                <!-- <button type = "submit"><a href="{% url 'login' %}"> Login </a></button> muestra un boton -->
-                <!-- <button type = "submit"><a href="{% url 'noticias:registro' %}">Registrate</a></button> muestra un boton -->
-            <!-- </div> -->
-        <!-- {% endif %} -->
-        
-    <!-- </div> -->
-
 
 
     {% block contenido %}
 
     {% endblock contenido%}
+    <footer class="pie-pagina">
+      <div class="grupo1">
+          <div class="box">
+            <figure>
+              <a href="#" class="logo-footer-container">
+                <img src="static/img/logito.png" alt="Logo de la Pagina" class="logo-footer-img">
+              </a>
+            </figure>
+          </div>
+          <div class="box">
+              <h2>SOBRE NOSOTROS</h2>
+              <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, nisi?</P>
+              <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, nisi?</P>
+          </div>
+          <div class="box">
+              <h2>SIGUENOS</h2>
+              <div class="red-social">
+                  <a href="#" class="fa fa-facebook"></a>
+                  <a href="#" class="fa fa-instagram"></a>
+                  <a href="#" class="fa fa-youtube"></a>
+                  <a href="#" class="fa fa-twitter"></a>
+              </div>
+          </div>
+      </div>
+      <div class="grupo2">
+          <small>&copy; 2023 <b>PROYECTO GAMER</b> - Todos Los Derechos Reservados</small>
+      </div>
+  <footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 
