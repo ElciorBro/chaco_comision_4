@@ -5,20 +5,25 @@
 
 {% block contenido%}
 
-<h1>{{noticia}}</h1>
-<img src="{{noticia.imagen.url}}" alt="" width="150">
-<p>{{noticia.cuerpo}}</p>
-<p>{{noticia.fecha}}</p>
-<p>{{noticia.categoria_noticia}}</p>
+<div style="background-color: rgb(214, 195, 110); margin: 1vw 1vw 1vw 30vw; width: 40vw; border-style: solid; border-radius: 25px; border-color: rgb(236, 132, 28);;">
+    <h1>{{noticia}}</h1>
+    <img src="{{noticia.imagen.url}}" alt="" width="150">
+    <p>{{noticia.cuerpo}}</p>
+    <p>{{noticia.fecha}}</p>
+    <p>{{noticia.categoria_noticia}}</p>
+</div>
 
 
-<form action="{% url 'noticias:comentar' %}" method="post">{% csrf_token %}
 
-    <textarea name="comentario" cols="30" rows="3"></textarea>
-    <input type="text" name="id_noticia" value="{{ noticia.pk }}" hidden="">
-    <input type="submit" value="comentar">
+<div style="background-color: rgb(214, 195, 110); margin: 1vw 1vw 1vw 30vw; width: 40vw; border-style: solid; border-radius: 25px; border-color: rgb(236, 132, 28);;">
+    <h1>{{noticia}}</h1>
+    <img src="{{noticia.imagen.url}}" alt="" width="150">
+    <p>{{noticia.cuerpo}}</p>
+    <p>{{noticia.fecha}}</p>
+    <p>{{noticia.categoria_noticia}}</p>
+</div>
+<input type="submit" value="Editar">
 
-</form>
 <h3>Comentarios</h3>
 {% for com in comentarios %}
 
@@ -26,5 +31,13 @@
 <p> comentario: {{ com.texto }}</p>
 
 {% endfor %}
+
+<hr> <!-- hr = Horizontal rule (linea horizontal) -->
+
+<form action="{% url 'noticias:comentar' %}" method="post">{% csrf_token %}
+    <textarea name="comentario" cols="30" rows="3"></textarea>
+    <input type="text" name="id_noticia" value="{{ noticia.pk }}" hidden="">
+    <input type="submit" value="comentar">
+</form>
 
 {% endblock contenido%}
