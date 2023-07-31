@@ -43,15 +43,6 @@ a{
   height: 30px ;
 }
 
-
-
-body{
-}
-
-
-.contenedor {
-}
-
 * {
     /* text-align: center; */
 }
@@ -104,17 +95,6 @@ body{
 }
 
 
-/* ESTILO DEL DIV PRINCIPAL */
-
-.main-container{
-  margin: 15px;
-  padding: 15px;
-}
-
-.aside-contaienr{
-  margin: 20px;
-  padding: 20px;
-}
 
 
 

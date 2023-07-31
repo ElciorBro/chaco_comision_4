@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
-
+<!-- Insertar Estilos -->
+{% block stylesheet %}
+    <link rel="stylesheet" href="{% static 'css/formulario.css' %}">
+{% endblock stylesheet %}
+<!-- Insertar Titulo -->
 {% block titulo%} Contacto{%endblock titulo%}
 <h1>Contacto</h1>
 {% block contenido%}

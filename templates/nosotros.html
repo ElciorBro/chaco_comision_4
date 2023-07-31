@@ -1,27 +1,31 @@
 {% extends 'base.html' %}
 {% load static %}
-
+<!-- Insertar Estilos -->
+{% block stylesheet %}
+    <link rel="stylesheet" href="{% static 'css/nosotros.css' %}">
+{% endblock stylesheet %}
+<!-- Insertar Titulo -->
 {% block titulo%} nosotros {%endblock titulo%}
 
 {% block contenido%}
-<h1>COMISION 5 - GRUPO 4</h1>
-
-<body style="background-image: url(/static/img/nosotros.jpg);background-repeat: no-repeat;background-size: 1370px 670px;">
-    
-</body>
-<hr> <!-- hr = Horizontal rule (linea horizontal) -->
-<p><strong> INTEGRANTES : </strong> </p> <!-- strong = NEGRITAS -->
-<ul> 
-    <li>Gonzalo Alarcón</li>
-    <li>Elias Barboza</li>
-    <li>Hugo Ramirez</li>
-    <li>Bruno Agustín Ruidiaz</li>
-</ul>
-<hr> <!-- hr = Horizontal rule (linea horizontal) -->
-
-
-
-
+<!-- <body style="background-image: url(/static/img/nosotros.jpg);background-repeat: no-repeat;background-size: 1370px 670px;"> -->
+<!-- </body> -->
+<div class="content-container">
+    <div class="main-container">
+        <h1>Quienes Somos?</h1>
+        <h3>Somos Estudiantes del informatorio de Chaco Programa 4.0 y este es nuestro proyecto de blog <br>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, sequi. <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, ipsa!</h3>
+    </div>
+    <hr> <!-- hr = Horizontal rule (linea horizontal) -->
+    <div class="second-container">
+        <h1>SOBRE NOSOTROS</h1>
+        <h3>Nosotros somos Elias Barboza, Hugo Ramirez, Agustin Ruidiaz y Gonzalo Alarcon <br>
+        Formamos parte del <strong> grupo 4 comision 5</strong><br><br>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi neque placeat nostrum velit autem sint ut iusto aspernatur voluptates temporibus!
+        </h3>
+    </div>
+</div>
 <!--- <h2>{{ saludo }}</h2>
 <h2>{{ nombre }}</h2>
 <h2>{{ autor }}</h2> -->

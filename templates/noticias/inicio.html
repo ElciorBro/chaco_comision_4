@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
-
+<!-- Insertar Estilos -->
+{% block stylesheet %}
+    <link rel="stylesheet" href="{% static 'css/noticias_inicio.css' %}">
+{% endblock stylesheet %}
+<!-- Insertar Titulo -->
 {% block titulo%} noticias {% endblock titulo %}
 
 {% block contenido%}

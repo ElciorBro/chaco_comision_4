@@ -1,0 +1,21 @@
+/* ESTILO DEL CONTENIDO */
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px; /* Establece un ancho máximo para el contenedor */
+  width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho disponible */
+  margin: 20px; /* Agrega un margen para separar del borde del body */
+}
+
+.main-container {
+  flex: 1; /* Esto permite que el contenido principal ocupe el espacio restante */
+  padding: 20px;
+  background-color: #f1f1f14d;
+}
+
+.aside-container {
+  width: 300px; /* Ancho fijo para el aside */
+  padding: 20px;
+  background-color: #5e5e5e51;
+}

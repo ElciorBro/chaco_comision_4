@@ -1,0 +1,36 @@
+body {
+    background-image: url("/static/img/nosotros.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 1370px 670px;
+  }
+
+/* MAIN CONTAINER */
+.main-container {
+    background-color: rgb(195, 195, 163, 0.5);
+    margin: 10px;
+    padding: 10px;
+}
+
+.main-container h1 {
+    color: rgb(255, 255, 255);
+}
+
+.main-container h3 {
+    color: rgb(200, 199, 199);
+}
+
+/* SECOND CONTAINER */
+.second-container {
+    background-color: rgba(69, 69, 55, 0.496);
+    margin: 10px;
+    padding: 10px;
+}
+
+.second-container h1 {
+    color: #ffffff;
+}
+
+.second-container h3 {
+    color: #ddcfcf;
+}
