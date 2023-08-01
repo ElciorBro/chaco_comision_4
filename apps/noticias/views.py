@@ -12,14 +12,46 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 # Importacion de la dependencia para crear vistas en la BD 
 from django.views.generic import CreateView
+from django.contrib.auth import authenticate, login
+from django.views import View
+from .forms import LoginForm
 
 # Clases de Registro de Usuarios
 
-class Registro(CreateView):
-    # forms django
-    form_class = RegistroForm
-    success_url = reverse_lazy('login')
+
+class Registro(View):
     template_name = 'noticias/registro.html'
+
+    def get(self, request):
+        form = RegistroForm()  # Utiliza tu formulario personalizado
+        return render(request, self.template_name, {'form': form})
+
+    def post(self, request):
+        form = RegistroForm(request.POST)  # Utiliza tu formulario personalizado
+        if form.is_valid():
+            form.save()
+            return redirect('login')
+        return render(request, self.template_name, {'form': form})
+
+
+class Login(View):
+    template_name = 'noticias/login.html'
+
+    def get(self, request):
+        form = LoginForm()
+        return render(request, self.template_name, {'form': form})
+
+    def post(self, request):
+        form = LoginForm(data=request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = authenticate(request, username=username, password=password)
+            if user is not None:
+                login(request, user)
+                # Lógica para el inicio de sesión exitoso (opcional)
+                return redirect('inicio')
+        return render(request, self.template_name, {'form': form})
 
 
 

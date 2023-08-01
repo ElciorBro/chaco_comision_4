@@ -2,8 +2,7 @@ body {
     background-image: url("/static/img/nosotros.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-  background-attachment: fixed;
-
+    background-size: 1370px 670px;
   }
 
 /* MAIN CONTAINER */

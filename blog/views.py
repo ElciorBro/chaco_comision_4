@@ -1,15 +1,7 @@
 from django.shortcuts import render, redirect
-#Importacion de los modelos
-from apps.noticias.models import Noticia
 
 def home(request):
-    noticias = Noticia.objects.all().order_by('-fecha')[:4]
-    ctx = {"noticia_0": noticias[0],
-           "noticia_1": noticias[1],
-           "noticia_2": noticias[2],
-           "noticia_3": noticias[3],
-    }
-    return render(request, 'home.html', ctx)
+    return render(request, 'home.html')
 
 
 def nosotros(request):

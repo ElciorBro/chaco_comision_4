@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    position: relative; /* Aseguramos que el body tenga una posición relativa */
+    font-family: arial;
+    background-image: url('/static/img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 20px;
+
+  }
+  
+  .container {
+    position: relative; /* Aseguramos que el contenedor tenga una posición relativa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Cambiamos 'height' por 'min-height' para evitar superposiciones */
+    padding: 50px;
+
+  }
+  
+  .card {
+    width: 100%; /* Ajustar el ancho del formulario */
+    background: #24303c;
+    padding: 30px;
+    margin: auto; /* Centrar horizontalmente */
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+  }
+  
+  .card-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 16px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .form-group label {
+    color: gray; /* Color de letra gris */
+    position: relative;
+  }
+  
+  .form-group label span {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  .form-group p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+  }
+  
+  .form-group a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .form-group a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .btn-block {
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+  
