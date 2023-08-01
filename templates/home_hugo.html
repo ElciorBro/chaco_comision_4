@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- Insertar Estilos -->
+{% block stylesheet %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock stylesheet %}
+<!-- Insertar Titulo -->
+{% block titulo%} home {%endblock titulo%}
+
+{% block contenido%}
+
+
+<h1 style="text-align: center;"> ULTIMAS  NOTICIAS </h1>
+
+<div class="content-container"; style="text-align: center; ">
+    <!--
+    <div class="main-container">
+        <h1>TITULO H1</h1>
+        <h2>H2 SEGUNDO TITULO -  -- - - - - - - -SEGUNDO TITULO -  -- - - - - - - -SEGUNDO TITULO -  -- - - - - - - -SEGUNDO TITULO -  -- - - - - - - -</h2>
+        <h3>H3 TERCERA LINEA DE TITULOS  - - -- TERCERA LINEA DE TITULOS  - - -- TERCERA LINEA DE TITULOS  - - -- TERCERA LINEA DE TITULOS  - - -- TERCERA LINEA DE TITULOS  - - -- TERCERA LINEA DE TITULOS  - - -- TERCERA LINEA DE TITULOS  - - -- TERCERA LINEA DE TITULOS  - - -- </h3>
+    </div>
+    <aside class="aside-container">
+        <h2>titulo costado¡=?</h2>
+        <h3>descripcion constado descripcion constado descripcion constado descripcion constado descripcion constado </h3>
+    </aside>
+    -->
+
+
+        <div style="color: rgba(15, 177, 0, 0.5); background-color: rgba(15, 177, 0, 0.5); width: 40vw; border-style: solid; margin-right: 5px; height: 630px;">
+            <div>
+                <h3><a href="{% url 'noticias:detalle' 1 %}">noticia 1</a></h3> 
+                <img src="../static/img/1.jpg" alt="imagen noticia 1" width="200px">
+                <p style="color: bisque;"> comentario comentario comentario comentario comentario comentario comentario comentario comentario comentario comentario comentario  </p>
+            </div>
+        </div>
+        <div style="color: rgba(201, 49, 12, 0.5); background-color: rgba(201, 49, 12, 0.5); width: 40vw; border-style: solid; margin-right: 5px; height: 630px;">
+            <div>
+                <h3><a href="{% url 'noticias:detalle' 2 %}">noticia 2</a></h3> 
+                <img src="../static/img/2.jpg" alt="imagen noticia 1" width="200px">
+                <p style="color: bisque;"> comentario comentario comentario comentariocomentario comentario comentario comentariocomentario comentario comentario comentariocomentario comentario comentario comentariocomentario comentario comentario comentariocomentario comentario comentario comentariocomentario comentario comentario comentario comentario comentario comentario comentario comentario comentario comentario comentario  </p>
+            </div>
+        </div>
+        <div style="color: rgba(243, 239, 8, 0.5); background-color: rgba(243, 239, 8, 0.5); width: 40vw; border-style: solid; margin-right: 5px; height: 630px;">
+            <h3><a href="{% url 'noticias:detalle' 1 %}">noticia 3</a></h3> 
+                <img src="../static/img/3.jpg" alt="imagen noticia 1" width="200px">
+                <p style="color: bisque;"> comentario comentario comentario comentario comentario comentario comentario comentario comentario comentario comentario comentario  </p>
+        </div>
+   
+        <div style="color: rgba(48, 27, 236, 0.5); background-color: rgba(48, 27, 236, 0.5); width: 40vw; border-style: solid; margin-right: 5px; height: 630px;">
+        <div>
+            <h3><a href="{% url 'noticias:detalle' 1 %}">noticia 4</a></h3> 
+            <img src="../static/img/4.jpg" alt="imagen noticia 1" width="200px">
+            <p style="color: bisque;"> comentario comentario comentario comentario comentario comentario comentario comentario comentario comentario comentario comentario  </p>
+        </div>
+    </div>
+
+
+
+    <aside class="aside-container" style="color: rgb(116, 116, 116); background-color: white;">
+            <!-- 
+            <h2>titulo costado¡=?</h2>
+            <h3>descripcion constado descripcion constado descripcion constado descripcion constado descripcion constado </h3>
+            -->
+            <button type="submit"><a href="">ver todas</a></button>
+
+
+
+    </aside>
+
+
+
+
+
+</div>
+    <body style="background-image: url(/static/img/fondo_home.jpg);background-repeat: no-repeat;background-size: 1370px 900px;"> 
+    
+    
+    </body>
+{% endblock contenido%}
+

@@ -1,3 +1,14 @@
+/* Fondo de Pagina */
+body {
+  background-image: url("/static/img/fondo_home.jpg");
+  background-repeat: no-repeat;
+  /* background-position: top; */
+  background-attachment: fixed;
+  background-size: cover;
+  
+}
+
+
 /* ESTILO DEL CONTENIDO */
 
 .content-container {
@@ -9,9 +20,42 @@
 }
 
 .main-container {
-  flex: 1; /* Esto permite que el contenido principal ocupe el espacio restante */
+  flex: 1;
   padding: 20px;
-  background-color: #f1f1f14d;
+}
+
+.carousel-container {
+  position: relative;
+}
+
+.noticias-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Asegura que ocupe todo el ancho del carousel-item */
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 0 0 10px 10px; /* Redondea solo la parte inferior del contenedor */
+  color: #fff;
+}
+
+.noticia-img{
+  height: 300px;
+  object-fit: cover; /* Para que la imagen se ajuste al contenedor */
+  border-radius: 10px;
+}
+
+/* Estilo del título de la noticia */
+.titulo-noticia {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Estilo del cuerpo de la noticia */
+.noticia-container p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
 }
 
 .aside-container {

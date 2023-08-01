@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo%} noticias {% endblock titulo %}
+
+{% block contenido%}
+<br>
+<br>
+<h2>Soy las noticias</h2>
+<div class="crear_noticia">
+    <button type="submit"><a href="{% url 'noticias:registrar_noticia' %}">CREAR NOTICIA</a></button>
+</div>
+<a href="{% url 'noticias:inicio' %}"> Todas</a>
+{% for c in categorias %}
+<a href="?id={{c.pk}}">{{c.nombre}}</a>
+{% endfor %}
+
+{% for noticia in noticias %}
+<Div style="background-color: rgb(214, 195, 110); margin: 1vw 1vw 1vw 20vw; width: 60vw; border-style: solid;border-color: rgb(236, 132, 28);;">
+    <h2>titulo:<a href="{% url 'noticias:detalle' noticia.pk %}"> <strong>{{ noticia.titulo }}</strong></a></h2>
+    <p><em>{{ noticia.cuerpo }}</em></p>
+    
+    <img src="{{ noticia.imagen.url }}" alt="" width="340">
+
+    <p>{{noticia.fecha}} / <strong>{{noticia.categoria_noticia}}</strong></p>
+
+</Div>
+{% endfor %}
+
+{% endblock contenido%}
