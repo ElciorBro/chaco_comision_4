@@ -1,3 +1,13 @@
+/* Fondo de Pagina */
+
+body {
+  background-image: url("/static/img/fondo_home.jpg");
+  background-repeat: no-repeat;
+  /* background-position: top; */
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 /* ESTILO DEL CONTENIDO */
 
 .content-container {
