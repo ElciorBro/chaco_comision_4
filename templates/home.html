@@ -9,68 +9,66 @@
 
 {% block contenido%}
 <div class="content-container">
-
-    <div class="main-container">
-
+  <div class="main-container">
     <div id="carouselExampleCaptions" class="carousel slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active carousel-container">
-            <img src="{{ noticia_0.imagen.url }}" class="d-block w-100 img-fluid noticia-img" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <div class="noticias-container">
-                <h5 class="noticia-titulo">{{ noticia_0.titulo }}</h5>
-                <p class="noticia-cuerpo">{{ noticia_0.cuerpo }}</p>
-              </div>  
-            </div>
-          </div>
-          <div class="carousel-item carousel-container">
-            <img src="{{ noticia_1.imagen.url }}" class="d-block w-100 img-fluid noticia-img" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <div class="noticias-container">
-                <h5 class="noticia-titulo">{{ noticia_1.titulo }}</h5>
-                <p class="noticia-cuerpo">{{ noticia_1.cuerpo }}</p>
-              </div>  
-            </div>
-          </div>
-          <div class="carousel-item carousel-container">
-            <img src="{{ noticia_2.imagen.url }}" class="d-block w-100 img-fluid noticia-img" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <div class="noticias-container">
-                <h5 class="noticia-titulo">{{ noticia_2.titulo }}</h5>
-                <p class="noticia-cuerpo">{{ noticia_2.cuerpo }}</p>
-              </div>  
-            </div>
-          </div>
-          <div class="carousel-item carousel-container">
-            <img src="{{ noticia_3.imagen.url }}" class="d-block w-100 img-fluid noticia-img" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <div class="noticias-container">
-                <h5 class="noticia-titulo">{{ noticia_3.titulo }}</h5>
-                <p class="noticia-cuerpo">{{ noticia_3.cuerpo }}</p>
-              </div>  
-            </div>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+       </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active carousel-container">
+          <img src="{{ noticia_0.imagen.url }}" class="d-block w-100 img-fluid noticia-img" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="noticias-container">                
+              <h5 class="noticia-titulo">{{ noticia_0.titulo }}</h5>
+              <p class="noticia-cuerpo">{{ noticia_0.cuerpo }}</p>
+            </div>  
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="carousel-item carousel-container">
+          <img src="{{ noticia_1.imagen.url }}" class="d-block w-100 img-fluid noticia-img" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="noticias-container">
+              <h5 class="noticia-titulo">{{ noticia_1.titulo }}</h5>
+              <p class="noticia-cuerpo">{{ noticia_1.cuerpo }}</p>
+            </div>  
+          </div>
+        </div>
+        <div class="carousel-item carousel-container">
+          <img src="{{ noticia_2.imagen.url }}" class="d-block w-100 img-fluid noticia-img" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="noticias-container">
+              <h5 class="noticia-titulo">{{ noticia_2.titulo }}</h5>
+              <p class="noticia-cuerpo">{{ noticia_2.cuerpo }}</p>
+            </div>  
+          </div>
+        </div>
+        <div class="carousel-item carousel-container">
+          <img src="{{ noticia_3.imagen.url }}" class="d-block w-100 img-fluid noticia-img" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="noticias-container">
+              <h5 class="noticia-titulo">{{ noticia_3.titulo }}</h5>
+              <p class="noticia-cuerpo">{{ noticia_3.cuerpo }}</p>
+            </div>  
+          </div>
+        </div>
       </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
+  </div>
 </div>
-<aside class="aside-container">
-    <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, aliquam?</h2>
-    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque fuga alias quod voluptate dolores doloremque quo! Natus quis molestiae deserunt.</h3>
-</aside>
+<div class="bienvenida">
+  <h1 class="titulo-pagina">BIENVENIDO A PROYECTO GAMER</h1>
+  <h3 class="descripcion-pagina">Aqui encontraras muchas noticias sobre juegos indie! Te invitamos a que puedas registrarte y formar parte de esta comunidad</h3>
+</div>
 {% endblock contenido%}
 

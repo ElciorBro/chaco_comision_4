@@ -1,9 +1,18 @@
+
 body {
     background-image: url("/static/img/nosotros.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-  background-attachment: fixed;
+    background-attachment: fixed;
+  }
 
+  @media screen and (max-width: 767px) {
+body {
+    background-image: url("/static/img/nosotros_sm.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
   }
 
 /* MAIN CONTAINER */
