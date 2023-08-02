@@ -15,6 +15,7 @@ from django.views.generic import CreateView
 from django.contrib.auth import authenticate, login
 from django.views import View
 from .forms import LoginForm
+from django.shortcuts import render, get_object_or_404, redirect
 
 # Clases de Registro de Usuarios
 
@@ -92,6 +93,30 @@ def Detalle_Noticias(request, pk):
     contexto['comentarios'] = c
 
     return render(request, 'noticias/detalle.html', contexto)
+
+@login_required
+def editar_noticia(request, pk):
+    noticia = get_object_or_404(Noticia, pk=pk)
+
+    if request.method == 'POST':
+        form = NoticiaForm(request.POST, request.FILES, instance=noticia)
+        if form.is_valid():
+            form.save()
+            return redirect('noticias:detalle', pk=pk)
+    else:
+        form = NoticiaForm(instance=noticia)
+
+    return render(request, 'noticias/editar.html', {'form': form, 'noticia': noticia})
+
+@login_required
+def borrar_noticia(request, pk):
+    noticia = get_object_or_404(Noticia, pk=pk)
+    
+    if request.method == 'POST':
+        noticia.delete()
+        return redirect('noticias:inicio')  # Redirige a la página de inicio después de borrar la noticia
+
+    return render(request, 'noticias/borrar.html', {'noticia': noticia})
 
 
 

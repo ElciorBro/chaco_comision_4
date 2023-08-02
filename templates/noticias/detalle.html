@@ -5,31 +5,23 @@
 
 {% block contenido%}
 
-<div style="background-color: rgb(214, 195, 110); margin: 1vw 1vw 1vw 30vw; width: 40vw; border-style: solid; border-radius: 25px; border-color: rgb(236, 132, 28);;">
-    <h1>{{noticia}}</h1>
+<div style="background-color: rgb(214, 195, 110); margin: 1vw 1vw 1vw 30vw; width: 40vw; border-style: solid; border-radius: 25px; border-color: rgb(236, 132, 28);">
+    <h1>{{noticia.titulo}}</h1>
     <img src="{{noticia.imagen.url}}" alt="" width="150">
     <p>{{noticia.cuerpo}}</p>
     <p>{{noticia.fecha}}</p>
     <p>{{noticia.categoria_noticia}}</p>
+    
+    <!-- Agregar botones de editar y borrar -->
+    <a href="{% url 'noticias:editar_noticia' noticia.pk %}">Editar</a>
+    <a href="{% url 'noticias:borrar_noticia' noticia.pk %}">Borrar</a>
+
 </div>
-
-
-
-<div style="background-color: rgb(214, 195, 110); margin: 1vw 1vw 1vw 30vw; width: 40vw; border-style: solid; border-radius: 25px; border-color: rgb(236, 132, 28);;">
-    <h1>{{noticia}}</h1>
-    <img src="{{noticia.imagen.url}}" alt="" width="150">
-    <p>{{noticia.cuerpo}}</p>
-    <p>{{noticia.fecha}}</p>
-    <p>{{noticia.categoria_noticia}}</p>
-</div>
-<input type="submit" value="Editar">
 
 <h3>Comentarios</h3>
 {% for com in comentarios %}
-
-<p><strong>{{ com.usuario }}</strong> {{ com.fecha }}</p>
-<p> comentario: {{ com.texto }}</p>
-
+    <p><strong>{{ com.usuario }}</strong> {{ com.fecha }}</p>
+    <p> comentario: {{ com.texto }}</p>
 {% endfor %}
 
 <hr> <!-- hr = Horizontal rule (linea horizontal) -->

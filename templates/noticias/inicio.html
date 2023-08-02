@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
+
 <!-- Insertar Estilos -->
 {% block stylesheet %}
     <link rel="stylesheet" href="{% static 'css/noticias_inicio.css' %}">
 {% endblock stylesheet %}
+
 <!-- Insertar Titulo -->
-{% block titulo%} noticias {% endblock titulo %}
+{% block titulo%} Noticias {% endblock titulo %}
 
 {% block contenido%}
 <br>
@@ -16,17 +18,24 @@
 </div>
 <a href="{% url 'noticias:inicio' %}"> Todas</a>
 {% for c in categorias %}
-<a href="?id={{c.pk}}">{{c.nombre}}</a>
+    <a href="?id={{c.pk}}">{{c.nombre}}</a>
 {% endfor %}
 
-{% for noticia in noticias %}
-
-<h2>titulo:<a href="{% url 'noticias:detalle' noticia.pk %}"> <strong>{{ noticia.titulo }}</strong></a></h2>
-<p>cuerpo: {{ noticia.cuerpo }}</p>
-<p>{{noticia.fecha}}</p>
-<p>categoria: {{noticia.categoria_noticia}}</p>
-<img src="{{ noticia.imagen.url }}" alt="" width="200">
-
-{% endfor %}
+<div class="row">
+    {% for noticia in noticias %}
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <img src="{{ noticia.imagen.url }}" class="card-img-top" alt="Noticia Imagen">
+            <div class="card-body">
+                <h5 class="card-title"><a href="{% url 'noticias:detalle' noticia.pk %}">{{ noticia.titulo }}</a></h5>
+                <p class="card-text">{{ noticia.cuerpo }}</p>
+                <p>{{ noticia.fecha }}</p>
+                <p>Categoría: {{ noticia.categoria_noticia }}</p>
+                <a href="{% url 'noticias:detalle' noticia.pk %}" class="btn btn-primary">Ver más</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 
 {% endblock contenido%}
