@@ -2,13 +2,29 @@
 {% load static %}
 
 {% block contenido%}
+<head>
+    <title>Inicio de sesion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
 
-<form method="POST">{% csrf_token %}
-    {{ form.errors }}
-    <input type="text" name="username" placeholder="usuario">
-    <input type="password" name="password" placeholder="contraseña">
-    <input type="submit" value="enviar">
 
-</form>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card mt-5 shadow">
+                <div class="card-body">
+                    <h3 class="card-title text-center">Iniciar Sesion</h3>
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary btn-block mt-3">Iniciar Sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock contenido%}

@@ -22,9 +22,7 @@ a{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border-width: 4px ; 
   padding: 3px;
-  /*border-style: solid;
-  border-color: black ;
-  width: 300px; /* pixeles es un unidad de medida absoluta siempre vale lo mismo*/
+
   height: 50px ;
 }
 .cerrar{
@@ -95,6 +93,10 @@ a{
 }
 
 
+
+.contenido {
+  min-width: 100vh;
+}
 
 
 

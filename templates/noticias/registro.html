@@ -1,13 +1,29 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block contenido%}
-<h1>Registro</h1>
-<form action="" method="post"> {% csrf_token %}
-    <table>
-        {{ form.as_table }}
-    </table>
-    <input type="submit">
-</form>
 
-{% endblock contenido%}
+<head>
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/registro.css' %}">
+</head>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card mt-5 shadow">
+                <div class="card-body">
+                    <h3 class="card-title text-center">Registro de Usuario</h3>
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary btn-block mt-3">Registrarse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  {% endblock contenido%}
