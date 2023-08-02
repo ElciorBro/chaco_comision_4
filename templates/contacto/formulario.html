@@ -8,9 +8,26 @@
 {% block titulo%} Contacto{%endblock titulo%}
 <h1>Contacto</h1>
 {% block contenido%}
-<form action="" method="post">{% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit">
-</form>
-
+<h1>Contacto</h1>
+<div class="bs-success-border-subtle form-container">
+    <form action="" method="post">{% csrf_token %}
+    <div class="mb-3">
+        <label for="{{ form.nombre.id_for_label }}" class="form-label">Nombre y Apellido</label>
+        <input type="text" class="form-control" id="{{ form.nombre.id_for_label }}" placeholder="Nombre Completo" name="{{ form.email.name }}">
+    </div>
+    <div class="mb-3">
+        <label for="{{ form.email.id_for_label }}" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="{{ form.email.id_for_label }}" placeholder="name@example.com" name="{{ form.email.name }}">
+    </div>
+    <div class="mb-3">
+        <label for="{{ form.asunto.id_for_label }}" class="form-label">Email address</label>
+        <input type="text" class="form-control" id="{{ form.asunto.id_for_label }}" placeholder="Asunto" name="{{ form.asunto.name }}">
+    </div>
+    <div class="mb-3">
+        <label for="{{ form.mensaje.id_for_label }}" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="{{ form.mensaje.id_for_label }}" rows="3" name="{{ form.mensaje.name }}"></textarea>
+    </div>
+    <input type="submit" class="btn btn-primary" value="Enviar">
+    </form>
+</div>
 {% endblock contenido%}
