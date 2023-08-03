@@ -1,7 +1,7 @@
 # dependencias de Django
 from django.shortcuts import render, HttpResponse, redirect
 # Importacion de Modelos
-from .models import Noticia, Categoria, Contacto, Comentario
+from .models import Noticia, Categoria, Comentario, Contacto
 #importacion de Formularios
 from .forms import NoticiaForm, ContactoForm, RegistroForm
 # importamos reverse lazy para los comentarios
@@ -154,14 +154,19 @@ class CrearNoticia(LoginRequiredMixin, CreateView):
 
 
 
-def contacto(request):
-    data = {
-        'form': ContactoForm()
-    }
-    if request.method == 'POST':
-        ContactoForm(data=request.POST).save()
+class Contact(View):
+    template_name = 'contacto/formulario.html'
 
-    return render(request, 'contacto/formulario.html', data)
+    def get(self, request):
+        form = ContactoForm()  # Utiliza tu formulario personalizado
+        return render(request, self.template_name, {'form': form}) 
+
+    def post(self, request):
+        form = ContactoForm(request.POST)  # Utiliza tu formulario personalizado
+        if form.is_valid():
+            form.save()
+            return redirect('login')
+        return render(request, self.template_name, {'form': form}) 
 
 
 @login_required

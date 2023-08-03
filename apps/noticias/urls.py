@@ -12,7 +12,7 @@ urlpatterns = [
     path('detalle/<int:pk>/', views.Detalle_Noticias, name='detalle'),
 
     # url del formulario de contacto
-    path('contacto', views.contacto, name="contacto"),
+    path('contacto', views.Contact.as_view(), name="contacto"),
 
     # URL COMENTARIO
     path('comentario', views.Comentar_Noticia, name='comentar'),

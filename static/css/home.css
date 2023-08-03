@@ -64,6 +64,13 @@ body {
   background-color: #5e5e5e51;
 }
 
+.bienvenida {
+  background-color: rgba(197, 198, 198, 0.385);
+  border: 3px solid #890707;
+  border-radius: 2px;
+  margin: 20px 10px
+}
+
 /* Estilos para pantallas más pequeñas */
 @media screen and (max-width: 768px) {
   .content-container {
