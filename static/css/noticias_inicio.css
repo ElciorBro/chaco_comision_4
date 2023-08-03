@@ -1,3 +1,31 @@
 body {
 
   }
+
+.noticias-container {
+    border: 2px solid #ff1a1acb;
+    background-color: rgba(0, 0, 0, 0.556);
+    margin: 20px 50px;
+}
+
+/* Estilos para el botón "Agregar Noticia" */
+.btn-agregar-noticia {
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .btn-agregar-noticia:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Estilos para el título y el margen superior */
+  .text-center {
+    text-align: center;
+  }
+  
+  .mt-4 {
+    margin-top: 1.5rem;
+  }
