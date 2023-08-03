@@ -40,5 +40,3 @@ class NoticiaForm(forms.ModelForm):
         model = Noticia
         fields = ('titulo', 'cuerpo', 'imagen', 'categoria_noticia')
         
-# class BuscadorForm(forms.Form):
-#     busqueda = forms.CharField(label='Buscar', max_length=100)
